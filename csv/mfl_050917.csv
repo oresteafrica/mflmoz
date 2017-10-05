@@ -1,0 +1,131 @@
+"row","id","province","district","name","short_name","type","latitude","longitude"
+1,1020100,"Cabo Delgado","Cidade de Pemba","Hospital Provincial de Pemba HP","HP Pemba","Hospital Provincial",-12.9658,40.4953
+2,1020106,"Cabo Delgado","Cidade de Pemba","B. Cariacó CS III","CS B. Cariocó","Centro Saude",-12.9631,40.5172
+3,1020107,"Cabo Delgado","Cidade de Pemba","B. Ingonane CSURB","CS B. Ingonane","Centro Saude",-12.95319,40.50105
+4,1020108,"Cabo Delgado","Cidade de Pemba","Natite CSURB","CSURB Natite","Centro Saude U",-12.961906,40.509284
+5,1020109,"Cabo Delgado","Cidade de Pemba","B. Cimento CSURB","CS B. Cimento","Centro Saude",-12.963494,40.493274
+6,1020110,"Cabo Delgado","Cidade de Pemba","B. Eduardo Mondlane PS","CS Eduardo Mondlane","Centro Saude",-12.9711,40.5533
+7,1020111,"Cabo Delgado","Cidade de Pemba","Mahate CSURB","CSURB Mahate","Centro Saude",-13.019213,40.529295
+8,1020112,"Cabo Delgado","Cidade de Pemba","B. Muxara PS","CS B. Muxara","Centro Saude",-13.0597,40.525
+9,1020113,"Cabo Delgado","Cidade de Pemba","Centro de Saude de Paquite","CS Paquite","Centro Saude",-12.9625,40.4867
+10,1020151,"Cabo Delgado","Cidade de Pemba","Chuiba PSA","CS Chuiba","Centro Saude",-13.0225,40.5656
+11,1020206,"Cabo Delgado","Ancuabe","Ancuabe CS I","CS Ancuabe","Centro Saude",-12.96719,39.85723
+12,1020207,"Cabo Delgado","Ancuabe","Mariri PS","CS Mariri","Centro Saude",-13.0917,39.5931
+13,1020209,"Cabo Delgado","Ancuabe","Metoro CS III","CS Metoro","Centro Saude",-13.105,39.8742
+14,1020210,"Cabo Delgado","Ancuabe","Meza CS III","CS Mesa","Centro Saude",-13.0319,39.5522
+15,1020211,"Cabo Delgado","Ancuabe","Minhewene PS","CS Minhewene","Centro Saude",-12.9939,39.4675
+16,1020212,"Cabo Delgado","Ancuabe","Ntutupue CS II","CS Ntutupue","Centro Saude",-13.139813,40.056316
+17,1020213,"Cabo Delgado","Ancuabe","Ngewe PS","CS Ngewe","Centro Saude",-12.8603,39.9492
+18,1020214,"Cabo Delgado","Ancuabe","Nacuale CS II","CS Nacuale","Centro Saude",-12.964215,39.69418
+19,1020306,"Cabo Delgado","Balama","Balama CS I","CS Balama","Centro Saude",-13.34822,38.56693
+20,1020307,"Cabo Delgado","Balama","Impiri CS III","CS Impiri","Centro Saude",-13.3778,38.3703
+21,1020308,"Cabo Delgado","Balama","Kuekué CS III","CS KueKue","Centro Saude",-13.5469,38.4244
+22,1020309,"Cabo Delgado","Balama","Mavala PS","PS Mavala","Posto Saude",-13.2261,38.4806
+23,1020310,"Cabo Delgado","Balama","Ntete PS","PS Ntete","Posto Saude",-13.4286,38.5947
+24,1020311,"Cabo Delgado","Balama","Metata PS","PS Metata","Posto Saude",-13.2733,38.6361
+25,1020312,"Cabo Delgado","Balama","Murripa CS II","CS Murripa","Centro Saude",-13.46134,38.6908
+26,1020313,"Cabo Delgado","Balama","Muapé CS II","CS Muape","Centro Saude",-13.327578,38.73244
+27,1020406,"Cabo Delgado","Chiure","Chiúre HD","HD Chiure","Hospital Distrital",-13.3825,39.7844
+28,1020407,"Cabo Delgado","Chiure","Chiúre-Velho CS II","CS Chiure Velho","Centro Saude",-13.3728,39.9681
+29,1020408,"Cabo Delgado","Chiure",,"PS Bilibiza","Posto Saude",-13.67452,39.44419
+30,1020409,"Cabo Delgado","Chiure","Catapua CS III","CS Catapua","Centro Saude",-13.3975,39.4317
+31,1020410,"Cabo Delgado","Chiure","Mazeze PS","PS Mazeze","Posto Saude",-13.3594,40.1936
+32,1020411,"Cabo Delgado","Chiure","Ocúa CS III","CS Ocua","Centro Saude",-13.6464,39.7933
+33,1020412,"Cabo Delgado","Chiure","M'Mala PS","PS M'mala","Posto Saude",-13.4839,39.915
+34,1020413,"Cabo Delgado","Chiure","Namogelia CS II","CS Namogelia","Centro Saude",-12.56378,40.28497
+35,1020414,"Cabo Delgado","Chiure","Posto de Saude de Muege","PS Muege","Posto Saude",-13.3294,40.1008
+36,1020415,"Cabo Delgado","Chiure","Nakoto CS II","CS Nakoto","Centro Saude",-13.349312,39.736937
+37,1020416,"Cabo Delgado","Chiure","Samora Machel CS II","CS Samora Machel","Centro Saude",-13.649836,39.646511
+38,1020417,"Cabo Delgado","Chiure","Marera CS II","CS Marera","Centro Saude",-13.570429,39.934786
+39,1020506,"Cabo Delgado","Ibo","Ibo CS II","CS Ibo","Centro Saude",-12.3436,40.5847
+40,1020507,"Cabo Delgado","Ibo","Matemo PS","PS Matemo","Posto Saude",-12.2034751,40.6079303
+41,1020508,"Cabo Delgado","Ibo","Quirimbas CS I","CS Quirimba","Centro Saude",-12.407223,40.597543
+42,1020607,"Cabo Delgado","Macomia","Mucojo CS III","CS Mucojo","Centro Saude",-12.0683,40.4778
+43,1020608,"Cabo Delgado","Macomia","Quiterajo PS","CS Quaterajo","Centro Saude",-11.7514,40.4314
+44,1020609,"Cabo Delgado","Macomia","Nguida PS","PS Nguida","Posto Saude",-12.1427,39.9719
+45,1020612,"Cabo Delgado","Macomia","Macomia CS I","CS Macomia","Centro Saude",-12.2461,40.1256
+46,1020613,"Cabo Delgado","Macomia","Naunde CS II","CS Naunde","Centro Saude",-12.166674,40.474905
+47,1020611,"Cabo Delgado","Macomia","Piqueue CS II","CS Piquewe","Centro Saude",-11.88306,40.47111
+48,1020614,"Cabo Delgado","Macomia","Chai CS III","CS Chai","Centro Saude",-11.9311,40.1075
+49,1020706,"Cabo Delgado","Mecufi","Mecufi CS I","CS Mecufi","Centro Saude",-13.29078,40.55522
+50,1020707,"Cabo Delgado","Mecufi","Murrebue CS II","CS Murrebue","Centro Saude",-13.29069,40.55547
+51,1020708,"Cabo Delgado","Mecufi","Centro de Saude de Natuco","CS Natuco","Centro Saude",-13.4164,40.5267
+52,1020709,"Cabo Delgado","Mecufi","Ngoma CS II","CS Ngoma","Centro Saude",-13.2344599,40.5461815
+53,1020806,"Cabo Delgado","Meluco","Muaguide CS III","CS Muaguide","Centro Saude",-12.4589,40.0292
+54,1020809,"Cabo Delgado","Meluco","Meluco CS I","CS Meluco","Centro Saude",-12.54026,39.640903
+55,1020810,"Cabo Delgado","Meluco","Minhanha CS III","CS Minhanha","Centro Saude",-12.2775,39.6644
+56,1020811,"Cabo Delgado","Meluco","Mbanda CS III","CS Imbada","Centro Saude",-12.3964,40.1075
+57,1020812,"Cabo Delgado","Meluco","Ravia CS II","CS Ravia","Centro Saude",-12.643054,39.382764
+58,1020901,"Cabo Delgado","Mocímboa da Praia","Mocímboa Praia HR","HR Mocimboa Praia","Hospital Rural",-11.34949,40.35859
+59,1020904,"Cabo Delgado","Mocimbua da Praia",,"CS Milamba","Centro Saude",-11.345919,40.358138
+60,1020906,"Cabo Delgado","Mocímboa da Praia","Quelimane CS II","CS Quelimane","Centro Saude",-11.23082,40.27293
+61,1020907,"Cabo Delgado","Mocímboa da Praia","Mbau PS","PS Mbau","Posto Saude",-11.6269,40.1778
+62,1020908,"Cabo Delgado","Mocímboa da Praia","Diaca CS III","CS Diaca","Centro Saude",-11.5358,39.9367
+63,1020909,"Cabo Delgado","Mocímboa da Praia","Mangoma CS II","CS Mangoma","Centro Saude",-11.3877919,40.221327
+64,1020910,"Cabo Delgado","Mocímboa da Praia","Nanduadua CSURB","CSURB Nanduadua","Centro Saude",-11.349458,40.351628
+65,1021001,"Cabo Delgado","Montepuez","Montepuez HR","HR Montepuez","Hospital Rural",-13.12656,38.99914
+66,1021008,"Cabo Delgado","Montepuez","Mirate CS III","CS Mirate","Centro Saude",-12.9681,38.8011
+67,1021009,"Cabo Delgado","Montepuez","Linde PS","PS Linde","Posto Saude",-13.31388,38.94653
+68,1021010,"Cabo Delgado","Montepuez","Nairoto PS","PS Nairoto","Posto Saude",-12.5511,39.0019
+69,1021011,"Cabo Delgado","Montepuez","Namanhumbire CSURB","CS Namanhumbiri","Centro Saude U",-13.03682,39.2811
+70,1021012,"Cabo Delgado","Montepuez","Namueto CS III","CS Namueto","Centro Saude",-13.1311,39.0356
+71,1021013,"Cabo Delgado","Montepuez","Nropa PS","PS Nropa","Posto Saude",-13.1886,38.7431
+72,1021014,"Cabo Delgado","Montepuez","Mapupulo PS","PS Mapupulo","Posto Saude",-13.2233,38.8808
+73,1021015,"Cabo Delgado","Montepuez","Montepuez CSURB","CS Montepuez","Centro Saude",-13.22323,38.88094
+74,1021016,"Cabo Delgado","Montepuez","Niuhula CSURB","CSURB Niuhula","Centro Saude",-13.109124,39.002636
+75,1021017,"Cabo Delgado","Montepuez","Ntapata CS II","CS Ntapata","Centro Saude",-13.361925,38.800809
+76,1021104,"Cabo Delgado","Mueda",,"CS Nandimba","Centro Saude",-11.587975,39.544052
+77,1021105,"Cabo Delgado","Mueda","Chuti CS II (iPSL 398383)","CS Chudi","Centro Saude",-11.665534,39.555588
+78,1021106,"Cabo Delgado","Mueda","Mueda HR ","HR Mueda","Hospital Rural",-11.66301,39.55387
+79,1021107,"Cabo Delgado","Mueda","Chilinde PS","CS Chilinde","Centro Saude",-11.2958,39.4422
+80,1021108,"Cabo Delgado","Mueda","M'Peme CS III","CS M'peme","Centro Saude",-11.6003,39.6842
+81,1021109,"Cabo Delgado","Mueda","Chapa PS","CS Chapa","Centro Saude",-11.8225,39.4167
+82,1021110,"Cabo Delgado","Mueda","Namatil PS","CS Namatil","Centro Saude",-11.1153,39.4739
+83,1021111,"Cabo Delgado","Mueda","Posto de Saude de Negomano","PS Negomano","Posto Saude",-11.42524,38.48967
+84,1021112,"Cabo Delgado","Mueda","N'Gapa CS III","CS N'gapa","Centro Saude",-11.3058,39.3103
+85,1021113,"Cabo Delgado","Mueda","Mbuo CS III","CS Mbuo","Centro Saude",-11.53,39.7186
+86,1021206,"Cabo Delgado","Muidumbe","Muambula CS II","CS Muambula","Centro Saude",-11.82371,39.81238
+87,1021207,"Cabo Delgado","Muidumbe","Chitunda PS","CS Chitunda","Centro Saude",-11.7053,39.9856
+88,1021208,"Cabo Delgado","Muidumbe","Muatide CS II","CS Muatide","Centro Saude",-11.76,39.8053
+89,1021209,"Cabo Delgado","Muidumbe","Miteda PS","CS Miteda","Centro Saude",-11.7614,39.7356
+90,1021210,"Cabo Delgado","Muidumbe","Miangalewa CS II","CS Miangalewa","Centro Saude",-11.827958,40.074282
+91,1021211,"Cabo Delgado","Muidumbe","Namacande PS","CS Namacande","Centro Saude",-11.7794,39.9006
+92,1021212,"Cabo Delgado","Muidumbe","Ntchinga CS II","CS Ntchinga","Centro Saude",-11.734291,39.890498
+93,1021306,"Cabo Delgado","Namuno","Namuno CS I","CS Namuno","Centro Saude",-13.6186,38.8161
+94,1021307,"Cabo Delgado","Namuno","Hocula PS","CS Hucula","Centro Saude",-13.83,39.1228
+95,1021308,"Cabo Delgado","Namuno","Machoca CS III","CS Machoca","Centro Saude",-13.9653,38.8056
+96,1021309,"Cabo Delgado","Namuno","Meloco CS III","CS Meloco","Centro Saude",-13.4744,39.1742
+97,1021310,"Cabo Delgado","Namuno","Centro de Saude de Nanrapa","CS Namrapa (EP2)","Centro Saude",-13.6881,38.7753
+98,1021311,"Cabo Delgado","Namuno","Ncumbe CS III","CS Ncumpe","Centro Saude",-13.7094,38.6006
+99,1021312,"Cabo Delgado","Namuno","Papai CS III","CS Papai","Centro Saude",-14.0364,38.6767
+100,1021313,"Cabo Delgado","Namuno","Nicuita CS II","CS Nicuita","Centro Saude",-13.465683,38.881163
+101,1021314,"Cabo Delgado","Namuno","Namacaca CS II","CS Namacaca","Centro Saude",-14.041961,38.534931
+102,1021406,"Cabo Delgado","Nangade","Nangade CS II","CS Nangade","Centro Saude",-11.0614,39.6697
+103,1021407,"Cabo Delgado","Nangade","N'Tamba CS III","CS N'tamba","Centro Saude",-11.4267,39.7414
+104,1021408,"Cabo Delgado","Nangade","N'Toli CS III","CS N'toli","Centro Saude",-11.3864,39.595
+105,1021409,"Cabo Delgado","Nangade","Nkonga CS","CS Nkonga","Centro Saude",-11.241472,39.884587
+106,1021410,"Cabo Delgado","Nangade","Muhia CS II","CS Muhia","Centro Saude",-11.074,39.673
+107,1021506,"Cabo Delgado","Palma","Palma CS II","CS Palma","Centro Saude",-10.7808,40.4731
+108,1021507,"Cabo Delgado","Palma",,"CS Mute","Centro Saude",-10.96478,40.35593
+109,1021508,"Cabo Delgado","Palma","Olumbe CS III","CS Olumbe","Centro Saude",-10.9903,40.4792
+110,1021509,"Cabo Delgado","Palma","Maganja PSA","CS Maganja","Centro Saude",-10.8569,40.5894
+111,1021510,"Cabo Delgado","Palma","Pundanhari PS","CS Pundanhari","Centro Saude",-10.8908,40.0575
+112,1021511,"Cabo Delgado","Palma","Centro de Saude de Quionga","CS Quionga","Centro Saude",-10.5928,40.5078
+113,1021606,"Cabo Delgado","Metuge","Metuge CS I","CS Metuge","Centro Saude",-12.99474,40.38871
+114,1021609,"Cabo Delgado","Metuge","Mieze CS II","CS Mieze","Centro Saude",-13.107208,40.453526
+115,1021607,"Cabo Delgado","Metuge","Nacuta PS","CS Nacuta","Centro Saude",-12.9503,40.3197
+116,1021608,"Cabo Delgado","Metuge","Nanlia CS II","CS Nanlia","Centro Saude",-13.115006,40.286592
+117,1021610,"Cabo Delgado","Metuge","Ntessa CS II","CS Ntessa","Centro Saude",-12.892273,40.411212
+118,1021706,"Cabo Delgado","Quissanga","Quissanga CS II","CS Quissanga","Centro Saude",-12.4322,40.4833
+119,1021707,"Cabo Delgado","Quissanga","Cagembe PS","PS Cagembe","Posto Saude",-12.38,40.2642
+120,1021708,"Cabo Delgado","Quissanga","Mahate CS II","CS Mahate","Centro Saude ",-12.52369,40.42185
+121,1021709,"Cabo Delgado","Quissanga","Namaluco PSA","PSA Namaluco","Posto Saude",-12.3442,40.3139
+122,1021710,"Cabo Delgado","Quissanga","Bilibiza CS III","CS Bilibiza","Centro Saude",-12.5639,40.2853
+123,1021711,"Cabo Delgado","Quissanga","Tororo CS III","CS Tororo","Centro Saude",-12.5958,40.1522
+124,1021712,"Cabo Delgado","Quissanga","Nacoba CS","CS Nacoba","Centro Saude",-12.4357419,40.4961776
+125,,"Cabo Delgado","Cidade de Pemba","Instituto: Centro de Formação de Saúde de Pemba","CFS Pemba","Centro Formacao Saude",-12.962695,40.508579
+126,,"Cabo Delgado","Cidade de Pemba","Instituto: Instituto de Ciências de Saúde de Pemba","ICS Pemba","Instituto",-13.0191180388,40.5309698967
+127,,"Cabo Delgado","Mocímboa da Praia","Instituto: Centro de Formação de Saúde de Moçimboa de Praia","CFS Moçimboa de Praia","Centro Formacao Saude",-11.3398299,40.356331
+128,,"Cabo Delgado","Montepuez","DPM CABO DELGADO","DPM CABO DELGADO","Deposito Medicamentos",-13.1262,38.99848
+129,,"Cabo Delgado","Montepuez","Instituto: Centro de Formação de Saúde de Montepuez","CFS Montepuez","Centro Formacao Saude",-13.1166667,39
+130,,"Cabo Delgado","Muidumbe","Centro de Saude de Muidumbe","CS Muidumbe","Centro Saude",-11.8236,39.8122

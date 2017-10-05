@@ -1,0 +1,137 @@
+div {
+    float: left;
+}
+.drop, .fix {
+    border: 1px solid lightgrey;
+}
+.container {
+	font-family: "Arial";
+	width:100%;
+}
+.headiv {
+    float: left;
+    text-align: center;
+}
+#search_results {
+	width:80%;
+	height:20px;
+    font-size: x-small;
+}
+#hl, #hr {
+	width:20%;
+    font-size: x-small;
+}
+#hl {
+    text-align:left;
+}
+#hl input {
+	width:90%;
+}
+#hl img {
+	width:30px;
+}
+#hl img:hover {
+	cursor:pointer;
+}
+#hl td {
+}
+#hl td:nth-child(0n+1) {
+	width: 70%;
+}
+#hl td:nth-child(0n+2) {
+	width: 30%;
+}
+#hr {
+}
+#hr table {
+	float:right;
+	width:100%;
+}
+#hr button {
+	height:20px;
+    font-size: x-small;
+	background-color:gray;
+	color:white;
+}
+#hc {
+	width:60%;
+}
+.drop {
+    box-sizing: border-box;
+    height: 600px;
+}
+.fix {
+    float: left;
+    width:100%;
+    box-sizing: border-box;
+}
+#tree {
+	width: 10%;
+    font-size: x-small;
+    text-align:left;
+    padding:0;
+}
+#tree > ul {
+    padding-left:4px;
+	font-weight:bold;
+}
+#tree ul {
+	list-style-type:none;
+	padding-left:8px;
+}
+#tree ul ul {
+	display:none;
+	font-weight:normal;
+}
+#tree ul ul ul {
+	color:blue;
+}
+#tree span:hover {
+	background-color: lightblue;
+}
+#map {
+	width: 60%;
+}
+#form {
+	width: 30%;
+}
+.inform {
+	width: 100%;
+    float: left;
+	padding:10px;
+}
+#form_elements {
+    font-size: small;
+    height: 560px;
+	overflow: scroll;
+    text-align:left;
+}
+#form_elements table {
+	border-collapse:collapse;
+	width:94%;
+	margin-bottom:8px;
+}
+#form_elements table tbody td {
+	border:1px solid lightgrey;
+}
+#footer {
+    font-size: x-small;
+    padding:10px;
+    height: 200px;
+	overflow: scroll;
+}
+#hu_list {
+	border-collapse:collapse;
+}
+#hu_list td {
+	border:solid 1px black;
+}
+#hu_list tr:hover {
+	background-color:yellow;
+}
+@media (max-width: 720px) {
+	#tree, #map, #form {
+        float: none;
+        width: 100%;
+	}
+}

@@ -1,0 +1,336 @@
+
+<table><tbody>';
+	echo '<tr><td>Acesso para área restrita</td></tr>';
+	echo '<tr><td>Só para utentes cadastrados</td></tr>';
+	echo '<tr><td><button id="mfl_login">Login</button></td></tr>';	
+	echo '</tbody></table>
+
+
+
+
+<?php
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+	echo '<table><tbody>';
+	echo '<tr><td>Usuário</td></tr>';
+	echo '<tr><td>'.$_SESSION['user_name'].'</td></tr>';
+	echo '<tr><td><button>Logout</button></td></tr></tbody></table>';
+} else {
+	echo '<table><tbody>';
+	echo '<tr><td>Nome</td><td><input type="text" maxlength="100" size="5" /></td></tr>';
+	echo '<tr><td>Senha</td><td><input type="text" maxlength="100" size="5" /></td></tr>';
+	echo '<tr><td colspan="2"><button>Login</button></td></tr>';
+	echo '</tbody></table>';
+}
+
+?>
+
+		<script type="text/javascript" src="js/excelexportjs.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+ 
+<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
+ 
+<script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
+
+
+
+
+		$('#bu_export').click(function(){
+        	$("#stat_table").excelexportjs({
+            	containerid: "stat_table",
+				datatype: 'table'
+	        });
+        });
+
+
+
+Fatal error: Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY' in /var/www/html/mfl/csv.php:237 Stack trace: #0 /var/www/html/mfl/csv.php(237): PDO->exec('INSERT INTO uni...') #1 {main} thrown in /var/www/html/mfl/csv.php on line 237
+
+
+
+
+
+if ( isset($_SESSION['login'] and isset($_SESSION['user_name'] ) {
+	echo '<table><tbody>';
+	echo '<tr><td>Usuário</td></tr>';
+	echo '<tr><td>'.$_SESSION['user_name'].'</td></tr>';
+	echo '<tr><td><button>Logout</button></td></tr></tbody></table>';
+} else {
+	echo '<table><tbody>';
+	echo '<tr><td>Nome</td><td><input type="text" maxlength="100" size="5" /></td></tr>';
+	echo '<tr><td>Senha</td><td><input type="text" maxlength="100" size="5" /></td></tr>';
+	echo '<tr><td colspan="2"><button>Login</button></td></tr>';
+	echo '</tbody></table>';
+}
+
+
+up vote
+73
+down vote
+Logins are not too complicated, but there are some specific pieces that almost all login processes need.
+
+First, make sure you enable the session variable on all pages that require knowledge of logged-in status by putting this at the beginning of those pages:
+
+session_start();
+Next, when the user submits their username and password via the login form, you will typically check their username and password by querying a database containing username and password information, such as MySQL. If the database returns a match, you can then set a session variable to contain that fact. You might also want to include other information:
+
+if (match_found_in_database()) {
+    $_SESSION['loggedin'] = true;
+    $_SESSION['username'] = $username; // $username coming from the form, such as $_POST['username']
+                                       // something like this is optional, of course
+}
+Then, on the page that depends on logged-in status, put the following (don't forget the session_start()):
+
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+    echo "Welcome to the member's area, " . $_SESSION['username'] . "!";
+} else {
+    echo "Please log in first to see this page.";
+}
+Those are the basic components. If you need help with the SQL aspect, there are tutorials-a-plenty around the net.
+
+
+echo $tabquery[0]['Distrito'];
+echo '<br />';
+
+//----------------------------------------------------------------------------------------------------------------------
+$('#tabinfo').children('tbody').eq(0).children('tr').eq(2).children('td').eq(1).dblclick(function(){
+    alert('Quer apagar '+$(this).text()+' ?');
+    document.getSelection().removeAllRanges();
+});
+//----------------------------------------------------------------------------------------------------------------------
+$('#form_edit').click(function(){
+	var id_bu = this.id;
+	var key = id_bu.substr(13,5);
+	var val = $(this).siblings('.sara_edit_field_chosen_value').eq(0).val();
+    var row = $('#tabinfo').children('tbody').eq(0).children('tr');
+    var unit_name = $(row).eq(2).children('td').eq(1).text();
+    var unit_code = $(row).eq(2).children('td').eq(2).text();
+    var unit_id_array = unit_code.split('_');
+    var unit_id = unit_id_array[1];
+
+//	alert(id_bu+'\n'+key+'\n'+val+'\n'+unit_id); // debug
+
+	switch (key) {
+		case 'mz001':
+			skey = 'Código da unidade';
+			if(val.length > 16) { alert(skey+' longo \n('+val+')'); return false; }
+			if(val.length < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz003':
+			skey = 'Nome da unidade';
+			if(val.length > 255) { alert(skey+' longo \n('+val+')'); return false; }
+			if(val.length < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz004':
+			skey = 'Nome curto da unidade';
+			if(val.length > 10) { alert(skey+' longo \n('+val+')'); return false; }
+			if(val.length < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz005':
+			skey = 'Localização da unidade';
+			if(val.length > 255) { alert(skey+' longo \n('+val+')'); return false; }
+			if(val.length < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz006':
+			alert('não autorizado'); return false;
+			skey = 'Província';
+			if(val < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz007':
+			skey = 'Distrito';
+			if(val.length > 50) { alert(skey+' longo \n('+val+')'); return false; }
+			if(val.length < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz008':
+			skey = 'Posto Administrativo';
+			if(val.length > 255) { alert(skey+' longo \n('+val+')'); return false; }
+			if(val.length < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz009':
+			skey = 'Localidade';
+			if(val.length > 255) { alert(skey+' longo \n('+val+')'); return false; }
+			if(val.length < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz010':
+			skey = 'Endereço fisico';
+			if(val.length > 255) { alert(skey+' longo \n('+val+')'); return false; }
+			if(val.length < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz011':
+			alert('trabalho em curso'); return false;
+			skey = 'Informação de contacto';
+			if(val.length > 255) { alert(skey+' longo \n('+val+')'); return false; }
+			if(val.length < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz012':
+			skey = 'Tipo de unidade';
+			if(val < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz013':
+			skey = 'Autoridade gestora';
+			if(val < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz014':
+			skey = 'Ministério de tutela';
+			if(val < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz015':
+			skey = 'Estado operacional';
+			if(val < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz016':
+			alert('trabalho em curso'); return false;
+			skey = 'Data de construção';
+			if(! valid(val)) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz017':
+			alert('trabalho em curso'); return false;
+			skey = 'Data de ínicio';
+			if(! valid(val)) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz018':
+			alert('trabalho em curso'); return false;
+			skey = 'Data última requalificação';
+			if(! valid(val)) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz019':
+			alert('trabalho em curso'); return false;
+			skey = 'Data do último estado operacional';
+			if(! valid(val)) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz020':
+			alert('trabalho em curso'); return false;
+			skey = 'Data alteração de dados da Unidade de Saúde';
+			if(! valid(val)) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz022':
+			alert('trabalho em curso'); return false;
+			skey = 'Consultas externas apenas';
+			if(val > 1 || val < 0) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz023': 
+			alert('trabalho em curso'); return false;
+			skey = 'Tipos de serviços prestados';
+			if(val < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz023_c':
+			alert('trabalho em curso'); return false;
+			skey = 'Tipos de serviços prestados';
+			if(val.length < 1) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz025':
+			skey = 'Altitude';
+			if( isNaN(val) ) { alert('Falta '+skey+' (pode ser 0)'); return false; }
+			break;
+		case 'mz026':
+			skey = 'Latitude';
+			if( isNaN(val) ) { alert('Falta '+skey); return false; }
+			break;
+		case 'mz027':
+			skey = 'Longitude';
+			if( isNaN(val) ) { alert('Falta '+skey); return false; }
+			break;
+	}
+
+    $.ajax({
+		url: curdir + '/php/sara_db_insert.php',
+        data: { key: key, val: val, unit_id: unit_id },
+		type: 'GET',
+		dataType: 'html',
+		beforeSend: function(a){  },
+		success: function(a){
+			$('#edit_field').dialog('close');
+		    init_form_elements(curdir,'#form_elements',unit_id);
+		},
+		error: function(a,b,c){ alert('erro ajax\na = ' + a.responseText + '\nb = ' + b + '\nc = ' + c ); },
+		complete: function(a,b){  }
+	});
+
+
+
+});
+//----------------------------------------------------------------------------------------------------------------------
+function sara_edit_field(mz_id) {
+
+	if ( mz_id == 'mz011' ) {
+		alert('Trabalho em curso'); return;
+	}
+
+    var row = $('#tabinfo').children('tbody').eq(0).children('tr');
+    var unit_name = $(row).eq(2).children('td').eq(1).text();
+    var unit_code = $(row).eq(2).children('td').eq(2).text();
+    var unit_id_array = unit_code.split('_');
+    var unit_id = unit_id_array[1];
+    $.ajax({
+		url: curdir + '/php/sara_edit_field.php',
+        data: { fn: mz_id, id: unit_id},
+		type: 'GET',
+		dataType: 'html',
+		beforeSend: function(a){  },
+		success: function(a){
+			$('#edit_field').html(a);
+			$('#edit_field').dialog('open');
+		},
+		error: function(a,b,c){ alert('erro ajax\na = ' + a.responseText + '\nb = ' + b + '\nc = ' + c ); },
+		complete: function(a,b){  }
+	});
+}
+
+
+
+
+
+if (count($rows) < 0) {
+	echo '< 0<br />';
+	echo '?';
+	exit;
+}
+
+if (count($rows) == 1) {
+	echo '== 1<br />';
+	echo $rows['id'];
+	exit;
+}
+
+if (count($rows) > 1) {
+	echo '> 1<br />';
+	foreach ($rows as $row) {
+		echo $row['id'] . ',';
+	}
+	exit;
+}
+
+$sql = 'SELECT unit_code.id_unit FROM unit_code WHERE unit_code.code LIKE %'.$mfl_search.'%';
+
+echo $sql . '<hr />';
+
+$tabquery = $db->query($sql);
+$tabquery->setFetchMode(PDO::FETCH_ASSOC);
+$rows = $tabquery->fetch();
+
+if (count($rows) < 1) {
+	echo '?';
+	exit;
+}
+
+if (count($rows) == 1) {
+	echo $rows['id_unit'];
+	exit;
+}
+
+if (count($rows) > 1) {
+	foreach ($rows as $row) {
+		echo $row['id_unit'] . ',';
+	}
+	exit;
+}
+
+
+
+
+
+
