@@ -31,12 +31,12 @@ $loop_elements = array(
     array('mz001',
           'Código',
           'SELECT code FROM unit_code WHERE id_unit = '.$id_unit.'  ORDER BY date DESC LIMIT 1',
-          'SELECT code FROM unit_code WHERE id_unit = '.$id_unit.'  ORDER BY date DESC LIMIT 1'
+          ''
           ),
     array('mz003',
           'Nome',
           'SELECT name FROM units WHERE id = '.$id_unit,
-          'SELECT code FROM unit_code WHERE id_unit = '.$id_unit.'  ORDER BY date DESC LIMIT 1'
+          ''
           ),
 //    array('mz004',
 //          'Nome curto',
@@ -54,11 +54,12 @@ $loop_elements = array(
 (SELECT areas.name FROM areas WHERE areas.id IN (SELECT  hierarchy_areas_areas.id_up FROM hierarchy_areas_areas WHERE hierarchy_areas_areas.id IN (SELECT areas.id FROM areas WHERE areas.id = hierarchy_units_areas.id_area))) AS província
 FROM hierarchy_units_areas 
 WHERE hierarchy_units_areas.id_unit = '.$id_unit,
-          ''
+          'SELECT name FROM provinces_view'
 		),
     array('mz007',
           'Distrito',
-          'select (select areas.name from areas where areas.id = hierarchy_units_areas.id_area) as distrito from hierarchy_units_areas where hierarchy_units_areas.id_unit = '.$id_unit
+          'SELECT (SELECT areas.name FROM areas where areas.id = hierarchy_units_areas.id_area) AS distrito FROM hierarchy_units_areas WHERE hierarchy_units_areas.id_unit = '.$id_unit,
+          'SELECT areas.id, areas.name, hierarchy_areas_areas.id_up FROM areas, hierarchy_areas_areas WHERE areas.id = hierarchy_areas_areas.id AND hierarchy_areas_areas.id_up = '
           ),
 //    array('mz008',
 //          'Posto Administrativo',
@@ -135,7 +136,7 @@ WHERE hierarchy_units_areas.id_unit = '.$id_unit,
     array('mz023',
           'Tipos de serviços prestados',
           'SELECT (SELECT unit_service.name FROM unit_service WHERE unit_unit_service.id_service = unit_service.id) as service FROM unit_unit_service WHERE id_unit = '.$id_unit,
-          ''
+          'SELECT unit_service.name FROM unit_service'
           ),
 
     array('mz025',

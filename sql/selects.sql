@@ -283,8 +283,126 @@ id 	name 			id_up 	sid 	v
 */
 
 ========================================================================
+SELECT
+	areas.id,
+	areas.name,
+	hierarchy_areas_areas.id_up 
+FROM
+	areas, 
+	hierarchy_areas_areas
+WHERE 1=1
+	AND areas.id = hierarchy_areas_areas.id
+	AND hierarchy_areas_areas.id_up = 5
+	
+/*
+d	name			id_up 	
+77 	Angónia 		5
+78 	Cahora-Bassa 	5
+79 	Changara 		5
+80 	Chifunde 		5
+81 	Chiúta 			5
+82 	Dôa 			5
+83 	Macanga 		5
+84 	Mágoè 			5
+85 	Marara 			5
+86 	Marávia 		5
+87 	Moatize 		5
+88 	Mutarara 		5
+89 	Tete 			5
+90 	Tsangano 		5
+91 	Zumbo 			5
 
+*/
 
 ========================================================================
 
+DELIMITER //
+CREATE PROCEDURE `district_proc`(id_province_proc INT(11))
+BEGIN
+	SELECT
+		areas.id,
+		areas.name,
+		hierarchy_areas_areas.id_up 
+	FROM areas, 
+		hierarchy_areas_areas
+	WHERE areas.id = hierarchy_areas_areas.id 
+    	AND hierarchy_areas_areas.id_up = id_province_proc ;
+END //
+
+
+/*
+example: CALL district_proc(7)
+
+id		name		id_up 	
+117 	Báruè 		7
+118 	Chimoio 	7
+119 	Gondola 	7
+120 	Guro 		7
+121 	Macate 		7
+122 	Machaze 	7
+123 	Macossa 	7
+124 	Manica 		7
+125 	Mossurize 	7
+126 	Sussundenga 7
+127 	Tambara 	7
+128 	Vanduzi 	7
+
+*/
+
+========================================================================
+
+
+/*
+
+*/
+
+========================================================================
+
+
+/*
+
+*/
+
+========================================================================
+
+
+/*
+
+*/
+
+========================================================================
+
+
+/*
+
+*/
+
+========================================================================
+
+
+/*
+
+*/
+
+========================================================================
+
+
+/*
+
+*/
+
+========================================================================
+
+
+/*
+
+*/
+
+========================================================================
+
+/*
+
+*/
+
+========================================================================
 
