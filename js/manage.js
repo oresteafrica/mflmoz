@@ -63,6 +63,7 @@ $('#hr').on('click', '#mfl_logout', function(){
 		beforeSend: function(a){  },
 		success: function(a){
             $('#hr').html(login_html);
+            window.location.reload(false);
         },
 		error: function(a,b,c){ alert('erro ajax\na = ' + a.responseText + '\nb = ' + b + '\nc = ' + c ); },
 		complete: function(a,b){  }
