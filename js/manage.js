@@ -174,7 +174,9 @@ function init_form_elements(curdir,unit_id) {
 		success: function(a){
             $('#form_picture img').attr('src',src);
         },
-		error: function(a,b,c){  },
+		error: function(a,b,c){
+            $('#form_picture img').attr('src','');
+		},
 		complete: function(a,b){  }
 	});	
 }
