@@ -1,7 +1,6 @@
 <?php
 
-# verifica se l'utente ha il diritto di modificare la scheda
-
+include 'aut/ASEngine/AS.php';
 
 $localhosts = array(
     '127.0.0.1',
@@ -28,6 +27,11 @@ try {
 }
 
 $loop_elements = array(
+    array('mz000',
+          'Id interno',
+          'SELECT id FROM units WHERE id = '.$id_unit,
+          ''
+          ),
     array('mz001',
           'Código',
           'SELECT code FROM unit_code WHERE id_unit = '.$id_unit.'  ORDER BY date DESC LIMIT 1',
@@ -189,6 +193,13 @@ foreach ($loop_elements as $element) {
     echo '<td style="font-size:small;">'.$sqlres.'</td>';
     echo '</tr>';
 }
+
+if ( app('login')->isLoggedIn()) {
+    echo '<tr style="font-size:small;">';
+    echo '<td colspan="2"><button id="edit_form">Edit</button></td>';
+    echo '</tr>';
+}
+
 
 
 ?>

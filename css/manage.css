@@ -102,7 +102,6 @@ div {
 }
 #form_elements {
     font-size: small;
-    height: 560px;
 	overflow: scroll;
     text-align:left;
 }
@@ -113,6 +112,11 @@ div {
 }
 #form_elements table tbody td {
 	border:1px solid lightgrey;
+}
+#form_picture img {
+	max-width: 90%; 
+	display:block; 
+	height: auto;
 }
 #footer {
     font-size: x-small;

@@ -32,8 +32,22 @@ $('#hu_list').DataTable( {
 
 check_login();
 
-$('#login_logon').dialog({ autoOpen: false, modal: true, minHeight: 200, minWidth: 200, position: { my: "left top", at: "left top", of: window } });
-$('#form_edit').dialog({ autoOpen: false, modal: true });
+$('#login_logon').dialog({
+	autoOpen: false, modal: true,
+	minHeight: 200, minWidth: 200,
+	position: { 
+		my: "left top",
+		at: "left top",
+		of: window 
+	},
+	close: function( event, ui ) {
+		window.location.reload(false);
+	}
+});
+$('#form_edit').dialog({
+	autoOpen: false,
+	modal: true
+});
 
 //----------------------------------------------------------------------------------------------------------------------
 // logout function
@@ -54,6 +68,11 @@ $('#hr').on('click', '#mfl_logout', function(){
 		complete: function(a,b){  }
 	});
 
+});
+//----------------------------------------------------------------------------------------------------------------------
+// edit form
+$('#form_elements').on('click', '#edit_form', function(){
+	alert(this.id);
 });
 //----------------------------------------------------------------------------------------------------------------------
 // login function
@@ -83,7 +102,7 @@ $('#search_results').change(function(){
 //	alert('id = '+ id + '\ntext = ' + txt); return;
 	var map = init_map('#map');
 	localise_unit_on_map(curdir,map,txt,id);
-	init_form_elements(curdir,'#form_elements',id);
+	init_form_elements(curdir,id);
 });
 //----------------------------------------------------------------------------------------------------------------------
 // search function
@@ -107,7 +126,7 @@ $('#hl img').click(function(){
 			var txt = $('#search_results option:first').text();
 			var map = init_map('#map');
 			localise_unit_on_map(curdir,map,txt,id);
-			init_form_elements(curdir,'#form_elements',id);
+			init_form_elements(curdir,id);
         },
 		error: function(a,b,c){ alert('erro ajax\na = ' + a.responseText + '\nb = ' + b + '\nc = ' + c ); },
 		complete: function(a,b){  }
@@ -129,10 +148,11 @@ $('#hu_list td').click(function(){
 //	alert('id = '+id+'\nname = '+ name);
 	var map = init_map('#map');
 	localise_unit_on_map(curdir,map,name,id);
-	init_form_elements(curdir,'#form_elements',id);
+	init_form_elements(curdir,id);
 });
 //----------------------------------------------------------------------------------------------------------------------
-function init_form_elements(curdir,div,unit_id) {
+function init_form_elements(curdir,unit_id) {
+		src = curdir + '/img/' + unit_id + '.jpg';
     	$.ajax({
 		url: curdir + '/form_elements.php',
         data: { n: unit_id },
@@ -145,6 +165,17 @@ function init_form_elements(curdir,div,unit_id) {
 		error: function(a,b,c){ alert('erro ajax\na = ' + a.responseText + '\nb = ' + b + '\nc = ' + c ); },
 		complete: function(a,b){  }
 	});
+    	$.ajax({
+		url: src,
+		type: 'GET',
+		dataType: 'html',
+		beforeSend: function(a){  },
+		success: function(a){
+            $('#form_picture img').attr('src',src);
+        },
+		error: function(a,b,c){  },
+		complete: function(a,b){  }
+	});	
 }
 //----------------------------------------------------------------------------------------------------------------------
 function localise_unit_on_map(curdir,map,unit_name,unit_id) {
@@ -236,7 +267,7 @@ function init_tree(url) {
 
 					var map = init_map('#map');
 					localise_unit_on_map(curdir,map,h_t,h_i.substr(2));
-					init_form_elements(curdir,'#form_elements',h_i.substr(2));
+					init_form_elements(curdir,h_i.substr(2));
 
                 }
                 var row = $('#tabinfo').children('tbody').eq(0).children('tr');

@@ -39,6 +39,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 			<div class="drop" id="map"></div>
 			<div class="drop" id="form">
 				<div class="inform" id="form_elements"><table><tbody></tbody></table></div>
+				<div class="inform" id="form_picture"><img alt="" src="" /></div>
 			</div>
 			<div class="fix" id="footer">
 				<table id="hu_list">
